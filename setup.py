@@ -15,7 +15,7 @@ setup(
     name='anyone',
 
     # Version
-    version='0.1.4',
+    version='0.1.5',
 
     description='anyone lived in a pretty how town - the poem',
     long_description=readme(),
