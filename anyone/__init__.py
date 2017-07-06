@@ -6,11 +6,11 @@ from pprint import pprint
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'data.json'), encoding='utf-8') as json_data:
+with open(path.join(here, 'data.json')) as json_data:
     data = json.load(json_data)
 
 
-def poem():
+def main():
     """Spit out the poem."""
     verses = data['verses']
     # Here is an example of enumerate, which helps to get index and value.

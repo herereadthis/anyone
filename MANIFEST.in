@@ -1,2 +1,4 @@
 include LICENSE.txt
+include README.srt
 include anyone/data.json
+include *.json
