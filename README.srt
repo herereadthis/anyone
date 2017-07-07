@@ -1,18 +1,24 @@
+======
 Anyone
 ======
 
 This Python package will deliver the poem, "anyone lived in a pretty how town," by e.e. cummings.
 
+.. code-block:: python
+
+    # unit test
+    python -m pytest
+
 The real purpose of this package is build some solid Python foundations for future work.
 
-So, it turns out nearly all of the documentation on building your own python package is either out of date or conflicting. Even the documentation on the `official Python documentation <https://packaging.python.org/tutorials/distributing-packages/>` is wrong at times. There's also spotty documentation for the TestPyPi sandbox that is out of date too.
+So, it turns out nearly all of the documentation on building your own python package is either out of date or conflicting. Even the documentation on the `official Python documentation`_ is wrong at times. There's also spotty documentation for the TestPyPi sandbox that is out of date too.
 
 Anyway, I guess the best thing to do for now is to use this package as a starting template.
 
 You must create an account. There are actually two pypi pages; I'm not really sure which i the definitive source of truth, though doing anything to one site will affect the other.
 
-- `pypi.io <https://pypi.io>` 
-- `pypi.python.org <https://pypi.python.org/pypi>` 
+- pypi.io_
+- pypi.python.org_
 
 You must create a .pypirc file
 
@@ -53,6 +59,7 @@ Now cross your fingers and hopefully the rest will work
     
     # moment of truth
     pip install mypackgename
-  
-  
 
+.. _pypi.io: https://pypi.io
+.. _pypi.python.org: https://pypi.python.org/pypi
+.. _`official Python documentation`: https://packaging.python.org/tutorials/distributing-packages/

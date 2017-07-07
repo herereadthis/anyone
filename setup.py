@@ -11,6 +11,17 @@ def readme():
     with open('README.srt') as f:
         return f.read()
 
+
+requirements = []
+
+setup_requirements = [
+    'pytest-runner'
+]
+
+test-requirements = [
+    'pytest'
+]
+
 setup(
     name='anyone',
 
@@ -46,5 +57,8 @@ setup(
             'anyone=anyone:main'
         ]
     },
+    test_suite='tests',
+    test_require=test_requirements,
+    setup_requires-setup_requirements,
     zip_safe=False
 )
