@@ -7,9 +7,8 @@ here = path.abspath(path.dirname(__file__))
 # with open(path.join(here, 'README.srt'), encoding='utf-8') as f:
 #    long_description = f.read()
 
-def readme():
-    with open('README.srt') as f:
-        return f.read()
+with open('README.srt') as readme_data:
+    readme = readme_data.read()
 
 
 requirements = []
@@ -18,7 +17,7 @@ setup_requirements = [
     'pytest-runner'
 ]
 
-test-requirements = [
+test_requirements = [
     'pytest'
 ]
 
@@ -26,10 +25,10 @@ setup(
     name='anyone',
 
     # Version
-    version='0.1.5',
+    version='0.1.8',
 
     description='anyone lived in a pretty how town - the poem',
-    long_description=readme(),
+    long_description=readme,
     
     url='https://github.com/herereadthis/anyone',
 
@@ -58,7 +57,7 @@ setup(
         ]
     },
     test_suite='tests',
-    test_require=test_requirements,
-    setup_requires-setup_requirements,
+    tests_require=test_requirements,
+    setup_requires=setup_requirements,
     zip_safe=False
 )
