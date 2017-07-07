@@ -4,12 +4,8 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-# with open(path.join(here, 'README.srt'), encoding='utf-8') as f:
-#    long_description = f.read()
-
-with open('README.srt') as readme_data:
-    readme = readme_data.read()
-
+with open('README.srt', encoding='utf-8') as readme_rst:
+    long_description = readme_rst.read()
 
 requirements = []
 
@@ -25,11 +21,11 @@ setup(
     name='anyone',
 
     # Version
-    version='0.1.8',
+    version='0.1.12',
 
     description='anyone lived in a pretty how town - the poem',
-    long_description=readme,
-    
+    long_description=long_description,
+
     url='https://github.com/herereadthis/anyone',
 
     # Author details
@@ -42,7 +38,6 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3'
     ],
     keywords='sample development poem',

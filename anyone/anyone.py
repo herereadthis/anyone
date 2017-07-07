@@ -1,8 +1,7 @@
-"""Initiate stuff."""
+"""Create the Poem class."""
 
 import json
 from os import path
-from pprint import pprint
 
 here = path.abspath(path.dirname(__file__))
 
@@ -10,13 +9,31 @@ with open(path.join(here, 'data.json')) as json_data:
     data = json.load(json_data)
 
 
-def main():
-    """Spit out the poem."""
-    verses = data['verses']
-    # Here is an example of enumerate, which helps to get index and value.
-    # It is kind of like myArray.forEach((v, k) =>{}) in JavaScript
-    for index, verse in enumerate(verses):
-        for line in verse:
-            print(line)
-        if index != len(verses) - 1:
-            print('')
+class Poem:
+    """Make Poem class."""
+
+    def __init__(self):
+        """Initialize stuff."""
+        self.title = data['title']
+        self.author = data['author']
+        self.publication = data['publication']
+        self.verses = data['verses']
+
+    def get_author(self):
+        """Very redundant. You can do instance.author. It's just a demo."""
+        author = self.author
+        return author
+
+    def get_verse(self, v):
+        """Get a specific verse."""
+        verse_count = len(self.verses)
+        if v < verse_count:
+            return self.verses[v]
+
+    def print_poem(self):
+        """Print all the verses."""
+        for index, verse in enumerate(self.verses):
+            for line in verse:
+                print(line)
+            if index != len(self.verses) - 1:
+                print('')

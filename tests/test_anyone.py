@@ -1,7 +1,8 @@
-"""Unit tests for anyone"""
+"""Unit tests for anyone."""
 
 import pytest
-from anyone import anyone
+import anyone
+
 
 @pytest.fixture
 def response():
@@ -12,7 +13,10 @@ def func(x):
     return x + 1
 
 def test_answer():
-    anyone.main()
+    bar = anyone.main()
+    la = 'asdf'
+    print(la)
+    assert bar == 'bar'
     assert func(3) == 4
 
 def test_content(response):
