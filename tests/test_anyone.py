@@ -33,5 +33,16 @@ def test_verse():
     """Test getting specific verse."""
     poem = anyone.Poem()
     assert poem.get_verse() == poem.verses[0]
-    assert poem.get_verse(1) == poem.verses[1]
+    assert poem.get_verse(1) == poem.verses[0]
+    assert poem.get_verse(4) == poem.verses[3]
     assert poem.publication == poem.get_publication()
+
+
+def test_line():
+    """Test getting specific line."""
+    poem = anyone.Poem()
+    assert poem.get_line() == poem.verses[0][0]
+    assert poem.get_line(3) == poem.verses[0][2]
+    assert poem.get_line(5) == ''
+    assert poem.get_line(22) == poem.verses[4][1]
+    assert poem.get_line(1000) == ''

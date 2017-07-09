@@ -1,6 +1,7 @@
 """Create the Poem class."""
 
 import json
+import math
 from os import path
 
 here = path.abspath(path.dirname(__file__))
@@ -31,15 +32,24 @@ class Poem:
         """Very redundant. You can do instance.title."""
         return self.title
 
-    def get_verse(self, v=0):
+    def get_verse(self, v=1):
         """Get a specific verse."""
         verse_count = len(self.verses)
-        if v < verse_count:
-            return self.verses[v]
+        if v - 1 < verse_count:
+            return self.verses[v - 1]
 
-    def get_line_in_verse(self, v=0, l=0):
-        """Return a specific line from a specific verse."""
-        return 123
+    def get_line(self, line=1):
+        """Return a specific line."""
+        verse_size = len(self.get_verse()) + 1
+        if line > 1:
+            verse = math.floor((line - 1) / verse_size)
+            line_in_verse = (line - 1) % verse_size
+            try:
+                return self.verses[verse][line_in_verse]
+            except IndexError:
+                return ''
+        else:
+            return self.verses[0][0]
 
     def print_poem(self):
         """Print all the verses."""
