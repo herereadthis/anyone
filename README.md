@@ -1,15 +1,16 @@
 # Anyone
 
+[![Build Status](https://travis-ci.org/herereadthis/anyone.svg?branch=master)](https://travis-ci.org/herereadthis/anyone)
+[![PyPI version](https://badge.fury.io/py/anyone.svg)](https://badge.fury.io/py/anyone)
+
 Anyone is a very simple Python Package which parses the poem, 'anyone lived in a pretty how town' by E. E. Cummings.
 
 ```bash
 # Installation
 sudo pip3 install anyone
 
-
 # Run the package in terminal
 anyone
-
 
 # unit test
 git clone https://github.com/herereadthis/anyone.git
@@ -98,4 +99,3 @@ twine upload dist/*
 # moment of truth
 pip install mypackgename
 ```
-

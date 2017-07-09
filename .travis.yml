@@ -1,0 +1,25 @@
+env:
+  - SH=bash
+
+language: python
+
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "3.6"
+  - "3.6-dev" # 3.6 development branch
+  - "3.7-dev" # 3.7 development branch
+  - "nightly" # currently points to 3.7-dev
+
+# command to install dependencies
+install:
+  - sudo pip install .
+  - sudo pip install pytest
+  - sudo pip install flake8
+
+# command to run tests
+script:
+  - flake8 .
+  - pytest
